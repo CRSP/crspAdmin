@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>	
+  
+  <filter>
+  	<filter-name>EnCodeFilter</filter-name>
+  	<filter-class>filter.EnCodeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>EnCodeFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>LoginFilter</filter-name>
+  	<filter-class>filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>LoginFilter</filter-name>
+  	<url-pattern>/admin/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <servlet-name>AdminSer</servlet-name>
+    <servlet-class>servlet.AdminSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserSer</servlet-name>
+    <servlet-class>servlet.UserSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeptSer</servlet-name>
+    <servlet-class>servlet.DeptSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RecordSer</servlet-name>
+    <servlet-class>servlet.RecordSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ResTypeSer</servlet-name>
+    <servlet-class>servlet.ResTypeSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SchoolSer</servlet-name>
+    <servlet-class>servlet.SchoolSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SchDeptSer</servlet-name>
+    <servlet-class>servlet.SchDeptSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ResSer</servlet-name>
+    <servlet-class>servlet.ResSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UploadSer</servlet-name>
+    <servlet-class>servlet.UploadSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DownloadSer</servlet-name>
+    <servlet-class>servlet.DownloadSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CommentSer</servlet-name>
+    <servlet-class>servlet.CommentSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MockSer</servlet-name>
+    <servlet-class>servlet.MockSer</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <listener>
+  	<listener-class>util.ConextListener</listener-class>
+  </listener>
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>AdminSer</servlet-name>
+    <url-pattern>/AdminSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserSer</servlet-name>
+    <url-pattern>/UserSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeptSer</servlet-name>
+    <url-pattern>/DeptSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RecordSer</servlet-name>
+    <url-pattern>/RecordSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ResTypeSer</servlet-name>
+    <url-pattern>/ResTypeSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SchoolSer</servlet-name>
+    <url-pattern>/SchoolSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SchDeptSer</servlet-name>
+    <url-pattern>/SchDeptSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ResSer</servlet-name>
+    <url-pattern>/ResSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadSer</servlet-name>
+    <url-pattern>/UploadSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadSer</servlet-name>
+    <url-pattern>/DownloadSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CommentSer</servlet-name>
+    <url-pattern>/CommentSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MockSer</servlet-name>
+    <url-pattern>/MockSer</url-pattern>
+  </servlet-mapping>
+  
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/error.jsp</location>
+  </error-page>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  </web-app>
